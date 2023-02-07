@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#contenedor {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: whitesmoke;
+  background-image: url("https://www.nobodyinlondon.com/wp-content/uploads/2015/06/skeleton3.jpg");
+  background-size: 20%;
+}
+
+
+#principal {
+  width: 96%;
+  padding: 0.25rem;
+  text-align: center;
+}
+
+.row_datos {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+
+  background-color: lavenderblush;
+}
+
+.row_datos > label {
+  width: 55%;
+  padding: 0.5rem;
+  border-style: none none solid none;
+  border-color: lightgrey;
+}
+
+#explicacion{
+  display: flex;
+  justify-content: space-evenly;
+  cursor:pointer;
+  padding: 0 0 1rem 0;
+}
+
+.tancar{
+  cursor:pointer;
+  text-align: right;
+  padding: 0.25rem 5rem 1rem 0rem;
+}
+
+#miinformacion{
+  display: 'none';
+  background-color: rgba(255, 255, 255, 0.7);
+  color: rgb(0, 0, 0);
+}
+
+#miformacion{
+  display: 'none';
+  background-color: rgba(255, 255, 255, 0.7);
+  color: rgb(0, 0, 0);
+}
+
+#miformacion_con_transition{
+    transition: opacity 2s ease-out;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+#misconocimientos{
+  display: 'none';
+  background-color: rgba(255, 255, 255, 0.7);
+  color: rgb(0, 0, 0);
+}
+
+.modal {
+  display: none; /* Ocultar el modal al cargar la página */
+  position: fixed; /* Fijar la posición del modal */
+  z-index: 1; /* Poner el modal encima de otros elementos */
+  left: 0;
+  top: 0;
+  width: 100%; /* Ocupar todo el ancho de la pantalla */
+  height: 100%; /* Ocupar toda la altura de la pantalla */
+  overflow: auto; /* Habilitar el desplazamiento si el contenido del modal es más grande que la pantalla */
+  background-color: rgba(0,0,0,0.4); /* Poner un fondo semitransparente */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* Centrar el contenido del modal */
+  padding: 20px;
+  width: 80%; /* Establecer un ancho para el contenido */
+}
+
+.modal button {
+  font-size: 0.5rem;
+  padding : 0.25rem;
+}
+
+
+@media only screen and (max-width: 600px) {
+  #principal {
+    font-size: 1rem;
+    background-color: lightblue;
+  }
+
+  .row_datos > label {
+    font-size: 1rem;
+    width: 62%;
+    padding: 0.5rem 0 0.5rem 0 ;
+    border-style: none none solid none;
+    border-color: lightgrey;
+  }
+
+}

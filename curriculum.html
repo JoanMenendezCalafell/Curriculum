@@ -1,0 +1,217 @@
+<!-- 
+   https://stackoverflow.com/questions/574941/best-way-to-track-onchange-as-you-type-in-input-type-number
+   css: https://www.quackit.com/css/flexbox/tutorial/align_form_elements_with_flexbox.cfm
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="utf-8" />
+   <title> Currículum Joan Menéndez Calafell</title>
+   <link rel="stylesheet" href="estilos_curriculum.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <script>
+
+      function listaTrabajos(valor) {
+         if (valor == 0) verNada()
+         if (valor == 1) verTrabajopizza()
+         if (valor == 2) verTrabajopaquete()
+         if (valor == 3) verTrabajoindustrial()
+         // if (valor == 1) verTrabajoSeguridad()
+         // etc...
+      }
+      verNada = () => {
+         trabajodePizza.style.display = 'none'
+         trabajodeIndustrial.style.display = 'none'
+         trabajodePaquete.style.display = 'none'
+      }
+      verTrabajopizza = () => {
+         trabajodePizza.style.display = 'block'
+         trabajodeIndustrial.style.display = 'none'
+         trabajodePaquete.style.display = 'none'
+      }
+      verTrabajoindustrial = () => {
+         trabajodeIndustrial.style.display = 'block'
+         trabajodePizza.style.display = 'none'
+         trabajodePaquete.style.display = 'none'
+      }
+      verTrabajopaquete = () => {
+         trabajodePaquete.style.display = 'block'
+         trabajodeIndustrial.style.display = 'none'
+         trabajodePizza.style.display = 'none'
+      }
+
+      verFormacion = () => {
+         miformacion.style.display = 'block'
+         misconocimientos.style.display = 'none'
+         miinformacion.style.display = 'none'
+      }
+      cerrarFormacion = () => {
+         miformacion.style.display = 'none'
+      }
+      verConocimientos = () => {
+         misconocimientos.style.display = 'block'
+         miformacion.style.display = 'none'
+         miinformacion.style.display = 'none'
+      }
+      cerrarConocimientos = () => {
+         misconocimientos.style.display = 'none'
+      }
+      verInformacion = () => {
+         miinformacion.style.display = 'block'
+         miformacion.style.display = 'none'
+         misconocimientos.style.display = 'none'
+      }
+      cerrarInformacion = () => {
+         miinformacion.style.display = 'none'
+      }
+
+      const despedida= () => {
+         salida.innerHTML = "GRACIAS POR CONOCERME!   "   //${nombreInvitado}
+      }
+
+   </script>
+</head>
+
+
+<body>
+
+   <div id="contenedor">
+      <div id="principal">
+           <img style="background-color: rgba(255, 255, 255, 0.7);" src="imagenes\cooltext429053929536125.png" alt=""> 
+
+
+         <div id="explicacion">
+            <div onclick="verFormacion()" style="background-color: rgba(255, 255, 255, 0.7);color: rgb(0, 0, 0);"> MI FORMACIÓN </div>
+            <div onclick="verConocimientos()" style="background-color: rgba(255, 255, 255, 0.7);color: rgb(0, 0, 0);"> MIS CONOCIMIENTOS </div>
+            <div onclick="verInformacion()" style="background-color: rgba(255, 255, 255, 0.7);color: rgb(0, 0, 0);"> INFORMACIÓN </div>
+         </div>
+         
+         <div id="miformacion" style="display:none">
+            <p> Mi formación: </p>
+            <br>
+            <p>• Primaria (Son Pisà 2010-2016) </p>
+            <img style="background-color: rgba(255, 255, 255, 0.7);" src="imagenes\8612552818c16eede14da16e38a0d916.jpg" alt=""> 
+            <p>• ESO (IES Ramón Llull 2016-2020) </p>
+            <img style="background-color: rgba(255, 255, 255, 0.7);" src="imagenes\rll100-or-227x167.png" alt=""> 
+            <p>• CFGM (Sant Josep Obrer 2021-2023) </p>
+            <img style="background-color: rgba(255, 255, 255, 0.7);" src="https://i.vimeocdn.com/portrait/36888243_120x120" alt=""> 
+            <p class="tancar" onclick="cerrarFormacion()">  ❌ </p>
+         </div>
+
+         <div id="misconocimientos" style="display:none">
+            <p> Lenguajes de Programación: </p>
+            <p>• JAVASCRIPT •</p>
+            <p>• PYTHON •</p>
+            <p>• CSS •</p>
+            <p>• HTML •</p>
+            <p>• NODE •</p>
+            <p>• REACT •</p>
+            <br>
+            <p>Conocimientos y experiencia de trabajo en GitHub </p>
+            <br>
+            <p>DIPLOMAS:</p>
+            <p>• Curso de Introducción a la Virtualización •</p>
+            <p>• Premio Honorífico de Cine Independiente •</p>
+            <br>
+            <p>Conocimiento de Idiomas:</p>
+            <p>Inglés: Avanzado</p>
+            <p>Castellano: Nativo</p>
+            <p>Catalán: Nativo</p>
+            <br>
+            <p class="tancar" onclick="cerrarConocimientos()">  ❌ </p>
+            <br>
+         </div>
+
+         <div id="miinformacion" style="display:none">
+            <p> Información Personal </p>
+            <br>
+            <p>Nombre Completo:</p>
+            <p>Joan Menéndez Calafell</p>
+            <br>
+            <P>Fecha de Nacimiento</P>
+            <p>27 de Febrero de 2004</p>
+            <br>
+            <p>Información de Contacto:</p>
+            <p>Teléfono: 601 40 76 60</p>
+            <p>Mail: joanmenendezcalafell@gmail.com</p>
+            <p>Dirección: C/Victoria Peña Nº2 5ºA</p>
+            <br>
+            <p>Datos de Ocio:</p>
+            <p>Animal Favorito: Gatos y Perros</p>
+            <p>Me gusta: Leer, escribir, videojuegos, el frío, esqueletos, cocinar, invierno...</p>
+            <p>No me gusta: Ir de fiesta, ejercicio, verano, el calor, arañas... </p>
+            <p class="tancar" onclick="cerrarInformacion()">  ❌ </p>
+            <br>
+
+         </div>
+         <div id="explicacion">
+         <img style="transform: scaleX(-1);" src="imagenes\pngwing.com.png" alt="">
+         <img src="imagenes\pngwing.com.png" alt="">
+         </div>
+
+         <div class=" row_datos">
+            <div id="trabajos">
+               Proyectos Realizados:
+               <select id="mistrabajos" onchange="listaTrabajos(this.value)" style="font-size:1rem ; padding:0.25rem">
+               <option value="0">--Selecciona un Proyecto--</option>
+               <option value="1">Pizzería</option>
+               <option value="2">Paquetería</option>
+               <option value="3">Industrial</option>
+               </select>
+            </div>
+            </div>
+
+         <div id="trabajodePizza" style="display:none; background-color: rgba(255, 255, 255, 0.7);">
+            <br>
+            <p>Proyecto de pizzería Online con base de datos</p>
+            <br>
+            <a href="https://joanmenendezcalafell.github.io/Pizzer-a/">Pizzería Delicum</a>
+            <br><br><br>
+            <p class="tancar" onclick="trabajodePizza.style.display = 'none' ">  ❌ </p>
+         </div>
+         <div id="trabajodePaquete" style="display:none; background-color: rgba(255, 255, 255, 0.7);">
+            <br>
+            <p>Proyecto de Paquetería Online con envío de e-mail</p>
+            <br>
+            <a href="https://joanmenendezcalafell.github.io/FELIZ-NAVIDAD-MATIAS/">MiPaquete®</a>
+            <br><br><br>
+            <p class="tancar" onclick="trabajodePaquete.style.display = 'none' ">  ❌ </p>
+         </div>
+         <div id="trabajodeIndustrial" style="display:none; background-color: rgba(255, 255, 255, 0.7);">
+            <br>
+            <p>Rediseño HTML y CSS de antigua página web</p>
+            <br>
+            <a href="https://joanmenendezcalafell.github.io/MartiAmengualRedise-o/">Marti Amengual Técnica Industrial</a>
+            <br><br><br>
+            <p class="tancar" onclick="trabajodeIndustrial.style.display = 'none' "> ❌ </p>
+
+         </div>
+
+         <div id="explicacion">
+            <img style="height: 600px;" src="imagenes\pngegg (2).png" alt="">
+            <img style="transform: scaleX(-1); height: 600px;" src="imagenes\pngegg (2).png" alt="">
+         </div>
+
+
+
+            <div class=" row_datos">
+               <div class="resultados2" id="totalviatge">
+                  <button id="calcula" onclick="javascript:window.close()" style="font-size:1.2rem">
+                     Pulsa para Terminar
+                  </button>
+
+                  <div id="salida">
+                  </div>
+
+               </div>
+         </div>
+
+      </div>
+   </div>
+
+</body>
+
+</html>
